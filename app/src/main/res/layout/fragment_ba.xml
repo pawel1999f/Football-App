@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".BaFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <variable
+            name="baFragment"
+            type="com.example.twofragmentcontainer.ui.BaFragment" />
+    </data>
+    
+    <androidx.slidingpanelayout.widget.SlidingPaneLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/slidingPane">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="550dp"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler_view"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment2"
+        android:name="com.example.twofragmentcontainer.ui.bbFragment"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+    </androidx.slidingpanelayout.widget.SlidingPaneLayout>
+</layout>

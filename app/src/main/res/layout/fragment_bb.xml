@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".bbFragment">
+    
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.twofragmentcontainer.FootballViewModel" />
+    </data>
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.pickedPlayer.name}"/>
+
+        <TextView
+            android:id="@+id/player_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.pickedPlayer.position}" />
+
+        <TextView
+            android:id="@+id/player_nationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.pickedPlayer.nationality}" />
+
+        <TextView
+            android:id="@+id/player_birth_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.pickedPlayer.dateOfBirth}" />
+    </LinearLayout>
+
+
+</layout>
